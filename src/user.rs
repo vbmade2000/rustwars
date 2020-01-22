@@ -34,9 +34,16 @@ pub mod user {
         pub clan: String,
         pub leader_board_position: String,
         pub skills: String,
-        pub code_challanges: CodeChallanges,
     }
-    pub fn print_mac() {
-        println!("This is from mod")
+    impl User {
+        fn new(username: String, name: String, clan: String) -> User {
+            User {
+                username: username,
+                name: name,
+                clan: clan,
+                leader_board_position: String::from("testposition"),
+                skills: String::from("testskills"),
+            }
+        }
     }
 }
